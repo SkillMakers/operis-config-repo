@@ -18,9 +18,6 @@ management:
 tracing:
   url:  http://localhost:4317
 
-server:
-  port: 8082
-
 eureka:
   instance:
     prefer-ip-address: true

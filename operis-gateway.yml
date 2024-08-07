@@ -17,7 +17,13 @@ spring:
           predicates:
             - Path=/api/tasks/**,/api/projects/**
           filters:
-            - AddRequestHeader=Order-Request, Gateway
+            - AddRequestHeader=Task-Request, Gateway
+        - id: user-profile-service
+          uri: lb://operis-user-profile-service
+          predicates:
+            - Path=/api/user-profiles/**
+          filters:
+            - AddRequestHeader=User-Profile-Request, Gateway
 management:
   tracing:
     sampling:

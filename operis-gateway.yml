@@ -6,8 +6,8 @@ spring:
       enabled: true
     gateway:
       routes:
-        - id: user-service
-          uri: lb://operis-user-service
+        - id: user-account-service
+          uri: lb://operis-user-account-service
           predicates:
             - Path=/api/users/**, /api/auth/login
           filters:

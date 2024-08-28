@@ -30,8 +30,5 @@ code:
 
 logging:
   level:
-    root: DEBUG
-    io.jaegertracing: DEBUG
-    io.opentracing: DEBUG
-    org.springframework: DEBUG
-    org.springframework.web: DEBUG
+    root: ERROR
+    com.operis: INFO

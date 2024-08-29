@@ -24,6 +24,12 @@ spring:
             - Path=/api/user-profiles/**
           filters:
             - AddRequestHeader=User-Profile-Request, Gateway
+        - id: subscription-service
+          uri: lb://operis-subscription-service
+          predicates:
+            - Path=/api/subscriptions/**
+          filters:
+            - AddRequestHeader=Project-Request, Gateway
 management:
   tracing:
     sampling:

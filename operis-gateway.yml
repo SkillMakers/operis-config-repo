@@ -27,7 +27,7 @@ spring:
         - id: subscription-service
           uri: lb://operis-subscription-service
           predicates:
-            - Path=/api/subscriptions/**
+            - Path=/api/subscriptions/**,/api/user-subscriptions/**
           filters:
             - AddRequestHeader=Project-Request, Gateway
 management:

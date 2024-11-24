@@ -17,7 +17,7 @@ spring:
           predicates:
             - Path=/api/tasks/**,/api/projects/**,/project-service/swagger-ui.html,/project-service/v3/api-docs,/project-service/favicon.ico
           filters:
-            - RewritePath=/project-service/(?<segment>.*), /$\\{segment}
+            - RewritePath=/project-service/(?<segment>.*), /${segment}
             - AddRequestHeader=Project-Request, Gateway
         - id: user-profile-service
           uri: lb://operis-user-profile-service

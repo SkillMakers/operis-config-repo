@@ -15,7 +15,7 @@ spring:
         - id: project-service
           uri: lb://operis-project-service
           predicates:
-            - Path=/api/tasks/**,/api/projects/**,/project-service/swagger-ui.html,/project-service/v3/api-docs,/project-service/favicon.ico
+            - Path=/api/tasks/**,/api/projects/**,/project-service/swagger-ui.html,/project-service/v3/api-docs,/project-service/favicon.ico,/project-service/swagger-ui/index.html
           filters:
             - RewritePath=/project-service/(?<segment>.*), /${segment}
             - AddRequestHeader=Project-Request, Gateway

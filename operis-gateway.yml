@@ -15,12 +15,9 @@ spring:
         - id: project-service
           uri: lb://operis-project-service
           predicates:
-            - Path=/api/tasks/**,/api/projects/**,/project-service/swagger-ui.html, /project-service/**
+            - Path=/api/tasks/**,/api/projects/**, /project-service/**
           filters:
-            - RewritePath=/project-service/(?<segment>.*), /${segment}
             - AddRequestHeader=Project-Request, Gateway
-            - AddRequestHeader=X-Forwarded-Prefix, /project-service # Ajoute un en-tête HTTP X-Forwarded-Prefix pour indiquer au service en aval que les requêtes passent par le préfixe /project-service.
-            - StripPrefix=1  # Retire /project-service pour la redirection interne
         - id: user-profile-service
           uri: lb://operis-user-profile-service
           predicates:

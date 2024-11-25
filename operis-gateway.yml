@@ -20,7 +20,6 @@ spring:
             - RewritePath=/project-service/(?<segment>.*), /${segment}
             - AddRequestHeader=Project-Request, Gateway
             - AddRequestHeader=X-Forwarded-Prefix, /project-service
-            - AddRequestHeader=X-Forwarded-Prefix, /project-service
         - id: user-profile-service
           uri: lb://operis-user-profile-service
           predicates:

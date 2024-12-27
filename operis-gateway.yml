@@ -18,9 +18,6 @@ spring:
             - Path=/api/tasks/**,/api/projects/**, /project-service/**
           filters:
             - AddRequestHeader=Project-Request, Gateway
-            - name: Retry
-              args:
-                retries: 10
         - id: user-profile-service
           uri: lb://operis-user-profile-service
           predicates:

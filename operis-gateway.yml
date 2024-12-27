@@ -1,3 +1,5 @@
+toto: titi
+
 spring:
   main:
     web-application-type: reactive

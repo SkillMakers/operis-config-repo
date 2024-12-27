@@ -18,7 +18,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, loggers, metrics, prometheus, refresh
+        include: health, info, loggers, metrics, prometheus, refresh, env
 tracing:
   url:  http://localhost:4317
 

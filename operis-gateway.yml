@@ -30,6 +30,7 @@ spring:
             - Path=/api/subscriptions/**,/api/user-subscriptions/**
           filters:
             - AddRequestHeader=Project-Request, Gateway
+
 management:
   tracing:
     sampling:
@@ -37,10 +38,11 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, loggers, metrics, prometheus, refresh, env
+        include: health, info, loggers, metrics, refresh, env
   endpoint:
     gateway:
       enabled: true
+
 tracing:
   url:  http://localhost:4317
 

@@ -28,7 +28,5 @@ code:
 
 logging:
   level:
-    root: INFO
-    io.jaegertracing: DEBUG
-    io.opentracing: DEBUG
-
+    root: ERROR
+    com.operis: INFO

@@ -28,5 +28,5 @@ code:
 
 logging:
   level:
-    root: ERROR
-    com.operis: INFO
+    root: DEBUG
+    com.operis: DEBUG

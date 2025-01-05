@@ -12,10 +12,16 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
 management:
+  tracing:
+    sampling:
+      probability: 1.0
   endpoints:
     web:
       exposure:
         include: health, info, loggers, metrics, refresh, env
+
+tracing:
+  url:  http://localhost:4317
 
 code:
   secret: mAvsZD2KqE2Kv6VpF+VkN1P3PT+2uq5z0g2ZxF0StSc=

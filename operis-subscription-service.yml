@@ -19,8 +19,7 @@ management:
 
 logging:
   level:
-    root: ERROR
-    com.operis: INFO
+    root: INFO
 
 code:
   secret: mAvsZD2KqE2Kv6VpF+VkN1P3PT+2uq5z0g2ZxF0StSc=
